@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_app/network.dart';
 import 'package:flutter_app/stateController.dart';
 import 'package:get/get.dart';
@@ -45,6 +46,22 @@ class _HomeState extends State<Home> {
   @override
   void initState() {
     getCourses();
+  }
+
+  String? validateEmail(String? value) {
+    // Check if email is empty
+    if (value == null || value.isEmpty) {
+      return 'Please enter an email address';
+    }
+
+    // Simple regex to validate the email format
+    final emailRegex =
+        RegExp(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$');
+    if (!emailRegex.hasMatch(value)) {
+      return 'Please enter a valid email address';
+    }
+
+    return null;
   }
 
   List<Course> selectedCourse = [];
@@ -134,9 +151,18 @@ class _HomeState extends State<Home> {
                     controller: name,
                     decoration: const InputDecoration(hintText: "User name"),
                   ),
-                  TextField(
+                  TextFormField(
                     controller: email,
-                    decoration: const InputDecoration(hintText: "Email"),
+                    inputFormatters: [
+                      FilteringTextInputFormatter.allow(
+                          RegExp(r'[a-zA-Z0-9@._-]')),
+                    ],
+                    decoration: InputDecoration(
+                      labelText: 'Email',
+                      border: OutlineInputBorder(),
+                    ),
+                    keyboardType: TextInputType.emailAddress,
+                    validator: validateEmail,
                   ),
                   ListView.builder(
                       itemCount: selectedCourse.length,
@@ -148,6 +174,12 @@ class _HomeState extends State<Home> {
                       onPressed: () async {
                         if (name.text == "" || email.text == "") {
                           Get.snackbar("please fill all fields", "fill");
+                          return;
+                        }
+                        if (validateEmail(email.text) != null) {
+                          Get.snackbar("email not valid", "fill");
+
+                          return;
                         }
                         var res = await submitCources(name.text, email.text,
                             selectedCourse.map((course) => course.id).toList());
