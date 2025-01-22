@@ -52,11 +52,21 @@ class _SecondscreenState extends State<Secondscreen> {
                 keyboardType: TextInputType.emailAddress,
                 validator: validateEmail,
               ),
+              SizedBox(
+                height: 20,
+              ),
+              Text("Selected Courses"),
+              SizedBox(
+                height: 20,
+              ),
               ListView.builder(
                   itemCount: widget.selectedCourse.length,
                   shrinkWrap: true,
                   itemBuilder: (context, index) {
-                    return Text(widget.selectedCourse[index].name);
+                    return ListTile(
+                      title: Text(widget.selectedCourse[index].name),
+                      subtitle: Text(widget.selectedCourse[index].duration),
+                    );
                   }),
               ElevatedButton(
                   onPressed: () async {
