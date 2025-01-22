@@ -27,3 +27,5 @@ this application includes usage of provider for state management
 
 using provider all the courses fetched using the api are stored in stateController class in courses variable
 
+
+Search feature not implemented
