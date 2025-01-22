@@ -21,6 +21,7 @@ apis used:
 - to submit user request
     https://api.restful-api.dev/objects
     (used because i could not create a post api using mockoon)
+- did not implement search functionality
 
 Provide usage:
 this application includes usage of provider for state management
