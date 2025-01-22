@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_app/SecondScreen.dart';
 import 'package:flutter_app/network.dart';
 import 'package:flutter_app/stateController.dart';
@@ -35,16 +34,16 @@ class _HomeState extends State<Home> {
   bool loading = false;
   List<Course> courses = [];
 
-  TextEditingController search = new TextEditingController();
+  TextEditingController search = TextEditingController();
 
   getCourses() async {
     var data = await getCoursesApi();
     context.read<stateController>().setCourses(data);
-    print(context.read<stateController>().courses);
   }
 
   @override
   void initState() {
+    super.initState();
     getCourses();
   }
 

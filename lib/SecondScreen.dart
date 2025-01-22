@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/main.dart';
 import 'package:flutter_app/network.dart';
 import 'package:get/get.dart';
 
@@ -12,15 +11,13 @@ class Secondscreen extends StatefulWidget {
 }
 
 class _SecondscreenState extends State<Secondscreen> {
-  TextEditingController name = new TextEditingController();
-  TextEditingController email = new TextEditingController();
+  TextEditingController name = TextEditingController();
+  TextEditingController email = TextEditingController();
   String? validateEmail(String? value) {
-    // Check if email is empty
     if (value == null || value.isEmpty) {
       return 'Please enter an email address';
     }
 
-    // Simple regex to validate the email format
     final emailRegex =
         RegExp(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$');
     if (!emailRegex.hasMatch(value)) {
@@ -34,7 +31,7 @@ class _SecondscreenState extends State<Secondscreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Submit form"),
+          title: const Text("Submit form"),
         ),
         body: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -43,28 +40,27 @@ class _SecondscreenState extends State<Secondscreen> {
               children: [
                 TextField(
                   controller: name,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     labelText: 'name',
                     border: OutlineInputBorder(),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 TextFormField(
                   controller: email,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     labelText: 'Email',
                     border: OutlineInputBorder(),
                   ),
                   keyboardType: TextInputType.emailAddress,
-                  validator: validateEmail,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                Text("Selected Courses"),
-                SizedBox(
+                const Text("Selected Courses"),
+                const SizedBox(
                   height: 20,
                 ),
                 ListView.builder(
