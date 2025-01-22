@@ -92,4 +92,4 @@ Data used in mockoon
     { "id": 2, "name": "Advanced Dart", "duration": "6 weeks" }
   ]
 
-  ![alt text](image.png)
+![alt text](image-1.png)
