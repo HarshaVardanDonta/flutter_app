@@ -27,5 +27,8 @@ this application includes usage of provider for state management
 
 using provider all the courses fetched using the api are stored in stateController class in courses variable
 
+App Flow:
+user selects the fetched courses and cliks on continue which will navigate them to the form submit page where they will enter their name and email and click on submit
+
 
 Search feature not implemented

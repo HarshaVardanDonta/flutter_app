@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/main.dart';
 import 'package:flutter_app/network.dart';
 import 'package:get/get.dart';
 
@@ -94,7 +95,10 @@ class _SecondscreenState extends State<Secondscreen> {
                               .toList());
                       if (res) {
                         Get.snackbar("Success", "Api call successfull");
+                        name.text = "";
+                        email.text = "";
                         setState(() {});
+                        Navigator.pop(context);
                       }
                     },
                     child: const Text("send data"))
