@@ -33,3 +33,9 @@ user selects the fetched courses and cliks on continue which will navigate them 
 
 
 Search feature not implemented
+
+
+
+Provider uses ChangeNotifier to notify listeners of state changes.
+BLoC uses Streams and Sinks to manage state and events.
+Riverpod uses a provider-based system that is independent of the widget tree, allowing for more flexibility.
