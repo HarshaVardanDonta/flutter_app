@@ -39,3 +39,57 @@ Search feature not implemented
 Provider uses ChangeNotifier to notify listeners of state changes.
 BLoC uses Streams and Sinks to manage state and events.
 Riverpod uses a provider-based system that is independent of the widget tree, allowing for more flexibility.
+
+
+Data used in mockoon
+
+
+[
+    { "id": 1, "name": "Flutter Basics", "duration": "4 weeks" },
+    { "id": 2, "name": "Advanced Dart", "duration": "6 weeks" },
+    { "id": 1, "name": "Flutter Basics", "duration": "4 weeks" },
+    { "id": 2, "name": "Advanced Dart", "duration": "6 weeks" },
+    { "id": 1, "name": "Flutter Basics", "duration": "4 weeks" },
+    { "id": 2, "name": "Advanced Dart", "duration": "6 weeks" },
+    { "id": 1, "name": "Flutter Basics", "duration": "4 weeks" },
+    { "id": 2, "name": "Advanced Dart", "duration": "6 weeks" },
+    { "id": 1, "name": "Flutter Basics", "duration": "4 weeks" },
+    { "id": 2, "name": "Advanced Dart", "duration": "6 weeks" },
+    { "id": 1, "name": "Flutter Basics", "duration": "4 weeks" },
+    { "id": 2, "name": "Advanced Dart", "duration": "6 weeks" },
+    { "id": 1, "name": "Flutter Basics", "duration": "4 weeks" },
+    { "id": 2, "name": "Advanced Dart", "duration": "6 weeks" },
+    { "id": 1, "name": "Flutter Basics", "duration": "4 weeks" },
+    { "id": 2, "name": "Advanced Dart", "duration": "6 weeks" },
+    { "id": 1, "name": "Flutter Basics", "duration": "4 weeks" },
+    { "id": 2, "name": "Advanced Dart", "duration": "6 weeks" },
+    { "id": 1, "name": "Flutter Basics", "duration": "4 weeks" },
+    { "id": 2, "name": "Advanced Dart", "duration": "6 weeks" },
+    { "id": 1, "name": "Flutter Basics", "duration": "4 weeks" },
+    { "id": 2, "name": "Advanced Dart", "duration": "6 weeks" },
+    { "id": 1, "name": "Flutter Basics", "duration": "4 weeks" },
+    { "id": 2, "name": "Advanced Dart", "duration": "6 weeks" },
+    { "id": 1, "name": "Flutter Basics", "duration": "4 weeks" },
+    { "id": 2, "name": "Advanced Dart", "duration": "6 weeks" },
+    { "id": 1, "name": "Flutter Basics", "duration": "4 weeks" },
+    { "id": 2, "name": "Advanced Dart", "duration": "6 weeks" },
+    { "id": 1, "name": "Flutter Basics", "duration": "4 weeks" },
+    { "id": 2, "name": "Advanced Dart", "duration": "6 weeks" },
+    { "id": 1, "name": "Flutter Basics", "duration": "4 weeks" },
+    { "id": 2, "name": "Advanced Dart", "duration": "6 weeks" },
+    { "id": 2, "name": "Advanced Dart", "duration": "6 weeks" },
+    { "id": 1, "name": "Flutter Basics", "duration": "4 weeks" },
+    { "id": 2, "name": "Advanced Dart", "duration": "6 weeks" },
+    { "id": 1, "name": "Flutter Basics", "duration": "4 weeks" },
+    { "id": 2, "name": "Advanced Dart", "duration": "6 weeks" },
+    { "id": 1, "name": "Flutter Basics", "duration": "4 weeks" },
+    { "id": 2, "name": "Advanced Dart", "duration": "6 weeks" },
+    { "id": 1, "name": "Flutter Basics", "duration": "4 weeks" },
+    { "id": 2, "name": "Advanced Dart", "duration": "6 weeks" },
+    { "id": 1, "name": "Flutter Basics", "duration": "4 weeks" },
+    { "id": 2, "name": "Advanced Dart", "duration": "6 weeks" },
+    { "id": 1, "name": "Flutter Basics", "duration": "4 weeks" },
+    { "id": 2, "name": "Advanced Dart", "duration": "6 weeks" }
+  ]
+
+  ![alt text](image.png)
