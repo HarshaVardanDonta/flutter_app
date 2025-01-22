@@ -70,20 +70,20 @@ class _HomeState extends State<Home> {
           body: SingleChildScrollView(
             child: Column(
               children: [
-                Row(
-                  children: [
-                    Expanded(
-                        child: TextField(
-                      controller: search,
-                      decoration: const InputDecoration(hintText: "Search"),
-                    )),
-                    IconButton(
-                        onPressed: () {
-                          String query = search.text;
-                        },
-                        icon: const Icon(Icons.search)),
-                  ],
-                ),
+                // Row(
+                //   children: [
+                //     Expanded(
+                //         child: TextField(
+                //       controller: search,
+                //       decoration: const InputDecoration(hintText: "Search"),
+                //     )),
+                //     IconButton(
+                //         onPressed: () {
+                //           String query = search.text;
+                //         },
+                //         icon: const Icon(Icons.search)),
+                //   ],
+                // ),
                 ListView.builder(
                     physics: const NeverScrollableScrollPhysics(),
                     shrinkWrap: true,

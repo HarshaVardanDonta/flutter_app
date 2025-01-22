@@ -10,7 +10,7 @@ dependencies:
 - provider: ^6.1.2
 - http: ^1.3.0
 
-get is used to show the snackbars
+get is used to show the snackbars and to manage routing
 provider is used to manage state
 http is used to make api calls
 
